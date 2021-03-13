@@ -108,7 +108,7 @@
   <background id="toy_workshop_bg.swf" name="Toy workshop" enable="Y" default="N" is_premium="N" aid="9062" money="0" sharing="0"/>
   <background id="santacastle.swf" name="Santa Castle" enable="Y" default="N" is_premium="N" aid="9063" money="0" sharing="0"/>
   <background id="restaurant_int_bg.swf" name="French restaurant Interior" enable="Y" default="N" is_premium="N" aid="9531" money="0" sharing="0">
-  <background id="starfield.swf" name="Star Field" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
+  <background id="Starfield.swf" name="Star Field" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
   <background id="Night-Sky.png" name="Night Sky" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
     <colorset enable="Y" aid="9532">
   <color r="ccColorA">0x5B3E52</color>
