@@ -7,3 +7,9 @@ These are the Asset server files for RyanAnimate. Basicly a bunch of files are s
 want to modify the node.js wrapper online? Click [Here](https://github.com/2Epik4u/Wrapper-Online)
 do you want to add a new character on wrapper online? Click [Here](https://github.com/2Epik4u/Wrapper-Online-Characters)
 or the thumbnails? Click [Here](https://github.com/2Epik4u/Wrapper-Online-thumbnails)
+
+
+
+# Credits
+Working Old GoAnimate Swfs:
+## tonyanifire
