@@ -76,7 +76,7 @@
   <c_area oc="">ccColorB</c_area>
 </c_parts>
   </background>
-  <background id="boy_rm_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
+  <background id="boy_rm_bg.swf" name="Boy's Bedroom" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
   <background id="disco_bg.swf" name="Disco entrance" enable="Y" default="N" is_premium="N" aid="9810" money="0" sharing="0"/>
   <background id="bar_bg.swf" name="Bar" enable="Y" default="N" is_premium="N" aid="9809" money="0" sharing="0"/>
   <background id="cockpit_bg.swf" name="Plane cockpit" enable="Y" default="N" is_premium="N" aid="9808" money="0" sharing="0"/>
@@ -108,6 +108,8 @@
   <background id="toy_workshop_bg.swf" name="Toy workshop" enable="Y" default="N" is_premium="N" aid="9062" money="0" sharing="0"/>
   <background id="santacastle.swf" name="Santa Castle" enable="Y" default="N" is_premium="N" aid="9063" money="0" sharing="0"/>
   <background id="restaurant_int_bg.swf" name="French restaurant Interior" enable="Y" default="N" is_premium="N" aid="9531" money="0" sharing="0">
+  <background id="starfield.swf" name="Star Field" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
+  <background id="Night-Sky.png" name="Night Sky" enable="Y" default="N" is_premium="N" aid="9733" money="0" sharing="0"/>
     <colorset enable="Y" aid="9532">
   <color r="ccColorA">0x5B3E52</color>
 </colorset>
