@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<theme id="infographics" name="Video Infographics" cc_theme_id="infographics">
- <background id="living_room_bg.swf" name="Living room" enable="Y" default="N" is_premium="N" aid="9811" money="0" sharing="0"/>
-  <background id="barn_ext_bg.swf" name="Y" enable="Y" default="N" is_premium="N" aid="9700" money="0" sharing="0">  
-</theme>
