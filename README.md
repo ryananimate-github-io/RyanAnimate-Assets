@@ -1,5 +1,5 @@
-# Ryan-Animate-Assets
-These are the Asset server files for RyanAnimate. Basicly a bunch of files are stored from a server so other sites connect to it.
+# GoAnimate Assets
+These are the Asset server files for the old GoAnimate. Basicly a bunch of files are stored from a server so other sites connect to it.
 
 
 
