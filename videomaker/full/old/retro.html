@@ -17,7 +17,7 @@
 <link href="https://josephcrosmanplays532.github.io/fonts/2/font2014" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/477/go/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-<link href="https://josephcrosmanplays532.github.io/static/477/go/css/studio.css" rel="stylesheet" type="text/css">
+<link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/studio.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/477/go/css/video_voice_vendor.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/477/go/css/worknote.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/477/go/css/bootstrap/bootstrap-modal.css" rel="stylesheet" type="text/css">
@@ -175,11 +175,59 @@ function voiceBanner(bannerId) {
             <div id="playerdiv"></div>
             <div id="h5-playerdiv">
                 <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
-               <div class="buttons clearfix">
+              <div class="player-overlay loading">
+                    <div class="loading-icon">
+                        <div class="loading-message"></div>
+                    </div>
+                    <div class="replay-button"></div>
+                </div>
+                <div class="video-controls">
+                    <div class="playback-button">
+                        <div class="icon-image"></div>
+                    </div>
+                    <div class="seek-bar">
+                        <div class="value-bar total-bar"></div>
+                        <div class="value-bar buffered-bar"></div>
+                        <div class="value-bar played-bar"></div>
+                        <div class="slider-thumb"></div>
+                        <div class="time-tooltip">00:00</div>
+                    </div>
+                    <div class="time-display">
+                        <div class="text">00:00 / 00:00</div>
+                    </div>
+                    <div class="volume-control">
+                        <div class="volume-icon">
+                            <div class="icon-image"></div>
+                        </div>
+                        <div class="volume-slider">
+                            <div class="slider-track">
+                                <div class="track-value-bar"></div>
+                            </div>
+                            <div class="slider-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preview-alert-block" class="preview-alert-block clearfix">Auto-pause at end of scenes is not supported in our web video player.<br>The auto-pause feature is supported once you download the video as presentation in the "Share/Export" overlay.</div>
+            <div class="buttons clearfix">
                 <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Back to editing</button>
                 <button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>            </div>
 
             <a class="close_btn" href="#" onclick="switchBackToStudio(); return false;">×</a>
+        </div>
+    </div>
+
+    <div class="video-tutorial" id="video-tutorial" style="display: none;">
+        <div class="video-tutorial-body">
+            <h2>&nbsp;</h2>
+            <div class="video-tutorial-player">
+                <div id="wistia_player" class="wistia_embed" style="width:860px;height:445px">&nbsp;</div>
+            </div>
+            <a class="close_btn" href="#" onclick="return false;">×</a>
+        </div>
+        <div class="video-tutorial-footer clearfix">
+            <button class="tutorial-button" type="button">
+                Close            </button>
         </div>
     </div>
 </div>
