@@ -2,7 +2,7 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: bold;
-  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url('http://web.archive.org/web/20110618153543im_/http://themes.googleusercontent.com/font?kit=EFpQQyG9GqCrobXxL-KRMfEr6Hm6RMS0v1dtXsGir4g') format('truetype');
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url('..DroidSans-Bold.ttf') format('truetype');
 }
 
 /*
