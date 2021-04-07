@@ -13,3 +13,5 @@ or the thumbnails? Click [Here](https://github.com/2Epik4u/Wrapper-Online-thumbn
 # Credits
 Working Old GoAnimate Swfs:
 ## tonyanifire
+NOTE: the index is a readme for now until i create an new index.html file.
+you can stil use goanimate in this domain by clicking <a href="/dashboard/videos">here.</a>
