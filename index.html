@@ -181,7 +181,7 @@ GA_googleFetchAds();
 					</div>
 
 					<div class="home-video">
-						<a href="#" class="watch-demo" data-toggle="modal" data-target="#demo-video">Watch Demo &gt;</a>
+						<a class="home-video-play" href="#" data-wistia="xqze33zu4l"></a>
 					</div>
 				</div>
 			</div>
@@ -599,14 +599,102 @@ $('#themes-swf').css('height', '680px').flash({
 		</div>
 	</div>
 
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/xqze33zu4l/metadata.js"></script>
 <script>
-$('#demo-video').on('show.bs.modal', function(e) {
-    $(this).find('.embed-responsive').html('<iframe class="embed-responsive-item" allowfullscreen src="https://fast.wistia.net/embed/iframe/xqze33zu4l?autoPlay=1"></iframe>');
-}).on('hide.bs.modal', function(e) {
-    $(this).find('.embed-responsive').empty();
+$('.home-video-play, .watch-demo-link').click(function(e) {
+	e.preventDefault();
+	var hashId = 'xqze33zu4l';
+	if (!hashId) return;
+	$('#video-modal').modal({keyboard: true, backdrop: true});
+	Wistia.embed(hashId, {
+		version: "v1",
+		volumeControl: true,
+		controlsVisibleOnLoad: true,
+		endVideoBehavior: "reset",
+		autoPlay: true,
+		container: "wistia-player"
+	});
+});
+
+$('.video-holder').click(function(e) {
+	e.preventDefault();
+	var src = $(this).data('video');
+	if (!src) return;
+	$('#sample-video-modal').modal({keyboard: true, backdrop: true}).on('hidden', function() {
+		$('#sample-video-player').empty();
+	});
+	var player = $('<iframe width="800" height="450" frameborder="0" allowfullscreen></iframe>').attr('src', src);
+	$('#sample-video-player').empty().append(player);
+});
+
+$.waypoints('extendFn', 'flashControl', function(objectId) {
+	var paused = true;
+
+	this.waypoint({
+		handler: function(direction) {
+			if (paused && direction == 'down') {
+				document.getElementById(objectId).playBanner();
+				paused = false;
+			} else if (!paused && direction == 'up') {
+				document.getElementById(objectId).pauseBanner();
+				paused = true;
+			}
+		},
+		offset: function() {
+			// half of content is shown
+			return $(window).outerHeight() - $(this).height() / 2;
+		}
+	}).waypoint({
+		handler: function(direction) {
+			if (!paused && direction == 'down') {
+				document.getElementById(objectId).pauseBanner();
+				paused = true;
+			} else if (paused && direction == 'up') {
+				document.getElementById(objectId).playBanner();
+				paused = false;
+			}
+		},
+		offset: function() {
+			// half of content is hidden
+			return -$(this).height() / 2;
+		}
+	});
+
+	return this;
+});
+
+$.waypoints('extendFn', 'sticky', function() {
+	var $wrap = this.wrap('<div class="sticky-wrapper"></div>').parent(), options = $.extend({}, $.fn.waypoint.defaults);
+
+	options.handler = function(direction) {
+		var $sticky = $(this).children(':first'), shouldBeStuck = direction === 'down' || direction === 'right';
+		$sticky.toggleClass('stuck', shouldBeStuck);
+		$wrap.height(shouldBeStuck ? $sticky.outerHeight() : '');
+	};
+	$wrap.waypoint(options);
+
+	return this;
+});
+
+Wistia.embed("xqze33zu4l", {
+version: "v1",
+volumeControl: true,
+controlsVisibleOnLoad: true,
+endVideoBehavior: "reset",
+container: "wistia-player"
+});
+
+$('#sticky-banner').waypoint('sticky');
+$(function() {
+	$('.tools').waypoint('flashControl', 'tools');
+	$('.themes').waypoint('flashControl', 'themes');
+});
+// refresh due to A/B test
+$(document).ready(function() {
+	$.waypoints('refresh');
 });
 </script>
-
 <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];
