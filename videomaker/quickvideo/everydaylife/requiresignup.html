@@ -124,54 +124,13 @@ kisstrack('GoLiteStart');
 
 <div id="login_bar" style="display:none">
 	<div class="inside">
-		This will be in the comedy world template that dosen't requrie you to sign in.		<div class="options">
-			<a href="#" onclick="fullscreenStudio('/');">Main Page</a> -
+		The Old GoAnimate Templates Revival is in process. some buttons may not work at this stage of development.		<div class="options">
+			<a href="/">Main Page</a> -
 			<a id="login_link" href="/dashboard/videos">Your Videos</a> -
 			<a id="signup_link" href="/videomaker">Make a Video</a>
 		</div>
 	</div>
 </div>
-<script>
-function fullscreenStudio('/');
-{
-	if (!FB) {
-		displayFeedback ("1" + GT.gettext("Sorry, but the main page link did not work. Please try again or contact the owner of this website to fix the issue in the bug report channel on the discord server called GoAnimate For Schools Remastered."));
-		return;
-	}
-
-	FB.login(function(response) {
-		if (response.authResponse) {
-			FBConnectCheck();
-		}
-	}, {scope:'email,publish_stream,offline_access'});
-}
-
-function FBConnectCheck() {
-	jQuery.post('/ajax/FBConnectCheck', function(response) {
-		parseResponse(response);
-
-		if (responseArray['code'] == '0') {
-			if (responseArray['json'].type == 'new' && _kmq) {
-				var d = new Date();
-				_kmq.push(['record', 'Completed Signup', {'Signup Cohort':d.getFullYear() + '-' + (d.getMonth()+1)}]);
-			}
-			jQuery(document).trigger('user.signup');
-		} else {
-			showNotice(responseArray['json'].error, true);
-		}
-	});
-}
-jQuery('#login_link').click(function(e) {
-	e.preventDefault();
-	showOverlay(jQuery('#login'));
-	jQuery('#login_email').focus();
-});
-jQuery('#signup_link').click(function(e) {
-	e.preventDefault();
-	showOverlay(jQuery('#signup'), {top: '80px'});
-	jQuery('#email').focus();
-});
-</script>
 <div id="social">
 	<div style="float:left;width:115px">
 	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Immortalize your favorite daily life stories in an animated video. It's fun and easy with GoAnimate Quick Video Maker: " data-url="http://web.archive.org/web/20120624020457/http://goanimate.com/text2video/everydaylife">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
