@@ -107,11 +107,11 @@ kisstrack('GoLiteStart');
 		<ul>
 			<li class="home" title="Back to Home"><a href="/videomaker" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Home</a></li>
 			<li class="seperate">&nbsp;</li>
-			<li class="step3"><a onclick="stepTo('#intro')">0</a></li>
-			<li class="step3"><a onclick="stepTo('#step1');">1</a></li>
-			<li class="step3"><a onclick="stepTo('#step2');">2</a></li>
+			<li class="step0"><a onclick="stepTo('#intro')">0</a></li>
+			<li class="step1"><a onclick="stepTo('#step1');">1</a></li>
+			<li class="step2"><a onclick="stepTo('#step2');">2</a></li>
 			<li class="step3"><a onclick="stepTo('#step3');">3</a></li>
-			<li class="step3"><a onclick="GoLite.preview();stepTo('#step4');">4</a></li>
+			<li class="step4"><a onclick="GoLite.preview();stepTo('#step4');">4</a></li>
 			<li class="seperate">&nbsp;</li>
 			<li class="next" title="Next step"><a>Next</a></li>
 			<li class="prev" title="Previous step"><a>Previous</a></li>
@@ -145,7 +145,7 @@ kisstrack('GoLiteStart');
 		<p>The drill? 1. Select a template / 2. Choose characters / 3. Pull a script out of your best life observations / 4. Watch your masterpiece!</p>
 	</div>
 
-	<a class="btn_next" href="#step3" onclick="stepTo('#step1'); return false;">Next</a>
+	<a class="btn_next" href="#step1" onclick="stepTo('#step1'); return false;">Next</a>
 </div>
 
 <div id="seperator0"></div>
@@ -229,7 +229,7 @@ kisstrack('GoLiteStart');
 		</div>
 	</div>
 
-	<a class="btn_next" href="#step3" onclick="stepTo('#step2'); return false;">Next</a>
+	<a class="btn_next" href="#step2" onclick="stepTo('#step2'); return false;">Next</a>
 	<div class="upgrade">
 		<a href="javascript:popUpgrade();" class="buttonbase buttonblue dark" style="margin:0 auto;float:none;display:block;">
 <div class="buttontitle">Upgrade Now</div>
@@ -604,7 +604,7 @@ var VoiceCatalog = (function() {
 
 	<div class="footer">
 		<div class="bottom"></div>
-		<a class="btn_next" href="#step3" onclick="GoLite.preview();stepTo('#step4');">Preview</a>
+		<a class="btn_next" onclick="GoLite.preview();stepTo('#step4');">Preview</a>
 
 		<div class="upgrade">
 			<a href="javascript:popUpgrade();" class="buttonbase buttonblue dark" style="margin:0 auto;float:none;display:block;">
