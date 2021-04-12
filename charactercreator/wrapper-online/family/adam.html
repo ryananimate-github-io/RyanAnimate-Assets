@@ -93,11 +93,7 @@ GA_googleFetchAds();
 
 <header>
 	<h1 style="margin:0"><img id="logo" src="/pages/img/logo.png" alt="Wrapper: Online"/></h1>
-	<nav id="headbuttons">
-		
-		<div class="dropdown_contain button_small">
-			<div class="dropdown_button">Make A Character</div>
-			<nav class="dropdown_menu">
+	
 				<h2>Pick a Character Creator Browser</h2>
 				<a href="/charactercreator/wrapper-online/family">Comedy World</a>
 				<a href="/charactercreator/wrapper-online/anime">Anime</a>
@@ -108,9 +104,7 @@ GA_googleFetchAds();
 				<a href="/charactercreator/wrapper-online/botdf">Blood on the Dance Floor</a>
 				<a href="/charactercreator/wrapper-online/cctoonadventure">Toon Adventure</a>
 				<a href="/charactercreator/wrapper-online/spacecitizen">Space Citizen</a>
-				<div class="dropdown_contain button_small">
-					<div class="dropdown_button">CREATE A CHARACTER</div>
-					<nav class="dropdown_menu">
+	                        <h1>CREATE A CHARACTER</h1>
 						<h2>Comedy World</h2>
 						<a href="/charactercreator/wrapper-online/family/adam">Guy (Adam)</a>
 						<a href="/charactercreator/wrapper-online/family&bs=eve">Girl (Eve)</a>
@@ -126,15 +120,18 @@ GA_googleFetchAds();
 						<h2>Peepz</h2>
 						<a href="/charactercreator/wrapper-online/cc2&bs=default">Lil Peepz</a>
 						<a href="/charactercreator/wrapper-online/chibi&bs=default">Chibi Peepz</a>
-						<a href="/charactercreator/wrapper-online/ninja&bs=default">Chibi Ninjas</a>
-					</nav>
-			</nav>
-		</div>
-		<a href="/videomaker/full/wrapper-online/custom" class="button_big">MAKE A VIDEO</a>
-	</nav>
-</header>
-  <div class="warning">
-            <a href="/pages/html/old.html">Make a video ></a><a href="/charactercreator/wrapper-online/family">Comedy World Characters ></a>Create a new character</div>
+	                                        <a href="/charactercreator/wrapper-online/ninja&bs=default">Chibi Ninjas</a>
+	                                        <hr>
+	                                        <h2>Video Maker</h2>
+	                                        <a href="/videomaker/full/wrapper-online/custom" class="button_big">MAKE A VIDEO</a>
+  <div class="container container-cc">
+
+
+        <ul class="breadcrumb">
+            <li><a href="/pages/html/old.html">Make a video</a></li>
+            <li><a href="/charactercreator/wrapper-online/family">Comedy World Characters</a></li>
+            <li class="active">Create a new character</li>
+        </ul>
 <div>
     <div id="char_creator_client" align="center"><object data="https://josephcrosmanplays532.github.io/animation/414827163ad4eb60/cc.swf" type="application/x-shockwave-flash" id="char_creator" width="960" height="600"><param name="align" value="middle"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="flashvars" value="apiserver=https%3A%2F%2Fwrapperstaticserver.herokuapp.com%2F&amp;m_mode=school&amp;bs=character&amp;isLogin=Y&amp;isEmbed=0&amp;ctc=go&amp;tlang=en_US&amp;storePath=https%3A%2F%2Fjosephcrosmanplays532.github.io%2Fstore%2F3a981f5cb2739137%2F%3Cstore%3E&amp;clientThemePath=https%3A%2F%2Fjosephcrosmanplays532.github.io%2Fstatic%2Fad44370a650793d9%2F%3Cclient_theme%3E&amp;appCode=go&amp;page=&amp;siteId=go&amp;userId=00EDZP3Cu0aw&amp;themeId=family&amp;ut=30"><param name="movie" value="https://josephcrosmanplays532.github.io/animation/414827163ad4eb60/cc.swf"></object></div>
 </div>
@@ -153,3 +150,9 @@ jQuery('#char_creator_client').flash({
    hasVersion: "10.3",
 
    flashvars: {"apiserver":"https:\/\/wrapperstaticserver.herokuapp.com\/","m_mode":"","bs":character,"isLogin":"Y","isEmbed":"0","ctc":"go","tlang":"en_US","storePath":"https:\/\/josephcrosmanplays532.github.io\/store\/3a981f5cb2739137\/<store>","clientThemePath":"https:\/\/josephcrosmanplays532.github.io\/static\/ad44370a650793d9\/<client_theme>","appCode":"go","page":"","siteId":"go","userId":"00EDZP3Cu0aw","themeId":"family","ut":30}});
+
+function characterSaved()
+{
+    window.location = '/pages/html/list.html';
+}
+</script>
