@@ -10,8 +10,8 @@
 <facial id="head_talk.swf" name="Talk" enable="Y" aid="6707"/>
 <tags>family,_free,_cat:Custom</tags>
 </char>
-<prop id="bad_face_1.swf" name="Bad Face 1" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6650" money="0" sharing="0"/>
-<prop id="bad_face_2.swf" name="Bad Face 2" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6651" money="0" sharing="0"/>
+<prop id="dining_room.png" name="Real Life Dinning Room" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6650" money="0" sharing="0"/>
+<prop id="basement_steps.png" name="Basement Steps" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6651" money="0" sharing="0"/>
 <prop id="cryin.swf" name="Crying" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6652" money="0" sharing="0"/>
 <prop id="scream.swf" name="Screaming" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6653" money="0" sharing="0"/>
 <prop id="bruh.swf" name="Bruh" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6654" money="0" sharing="0"/>
