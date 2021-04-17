@@ -2,5 +2,5 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: bold;
-  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url('..DroidSans-Bold.ttf') format('truetype');
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url('../DroidSans-Bold.ttf') format('truetype');
 }
