@@ -220,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</
         function tutorialCompleted() {
             $.ajax({
                 type: 'POST',
-                url: 'https://ga.vyond.com/ajax/tutorialStatus/completed'
+                url: '/ajax/tutorialStatus/completed'
             });
         }
 
@@ -728,7 +728,7 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
 
 <div id="studio_container" style="top: 0px; width: 2238px; height: 1586px;"><div class="ga-importer">
     <div class="ga-importer-header">
-        <form class="ga-importer-base-form" action="https://ga.vyond.com/ajax/saveUserProp" method="post">
+        <form class="ga-importer-base-form" action="/ajax/saveUserProp" method="post">
             <a class="ga-importer-collapse" href="#" title="Collapse" onclick="hideImporter(); return false;">×</a>
 
             <div class="fileinputs">
