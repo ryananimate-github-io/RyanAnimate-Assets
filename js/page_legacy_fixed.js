@@ -32,9 +32,9 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'apiserver':'/','m_mode':'school','isLogin':'Y','isEmbed':'0','ctc':'go','tlang':'en_US',
-          'storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
-          'appCode':'go','page':'','siteId':'go','userId':'0TBAAga2Mn6g','themeId':'family','bs':'adam','ut':30,'ft':'_sticky_filter_guy'
+                                        'storePath': process.env.STORE_URL + '/<store>',
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+                                        'appCode':'go','page':'','siteId':'go','userId':'0TBAAga2Mn6g','themeId':'family','bs':'adam','ut':30,'ft':'_sticky_filter_guy'
 				},
 				allowScriptAccess: 'always',
 				movie: process.env.SWF_URL + '/cc.swf', // 'http://localhost/cc.swf'
@@ -51,10 +51,10 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'apiserver':'/','isEmbed':'0','ctc':'go','tlang':'en_US',
-          'storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
-          'appCode':'go','siteId':'school','st':'','userId':'0DyHqK6Yj9dM','ut':23,'uisa':0,'themeId':'family',
-          'u_info_school':'OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ==',
+                                        'storePath': process.env.STORE_URL + '/<store>',
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+                                        'appCode':'go','siteId':'school','st':'','userId':'0DyHqK6Yj9dM','ut':23,'uisa':0,'themeId':'family',
+                                        'u_info_school':'OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ==',
 				},
 				allowScriptAccess: 'always',
 				movie: process.env.SWF_URL + '/cc_browser.swf', // 'http://localhost/cc_browser.swf'
@@ -73,11 +73,10 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'apiserver':'/','storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','ut':23,'isEmbed':0,'nextUrl':'/player?movieId=<movieId>',
-          'lid':'13','ctc':'go','tlang':'en_US',
-          'siteId':'13','appCode':'go','retut':1,
-          'u_info':'OjI6elg5SnZCOUEyTHZiY2lhZGRXTm9Nd0ljVWhNbEpGaXJFdkpEdkltdEp6RWhrQ0VIbXZIVTBjRTlhUGZKMjJoVHVTUE5vZk1XYnFtSE1vZG5TeldyQVJNcDFmUFB2NDVtR0FTSlZZ',
-          'tray':'custom','isWide':1,'goteam_draft_only':0,
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','ut':23,'isEmbed':0,'nextUrl':'/player?movieId=<movieId>',
+                                        'lid':'13','ctc':'go','tlang':'en_US',
+                                        'siteId':'13','appCode':'go','retut':1,
+                                        'tray':'custom','isWide':1,'goteam_draft_only':0,
 
 				},
 				allowScriptAccess: 'always',
