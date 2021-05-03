@@ -73,7 +73,7 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'movieId':'','loadas':0,'asId':'','originalId':'','apiserver':'/','storePath': process.env.STORE_URL + '/<store>',
-                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','animationPath': process.env.ANIMATION_URL + '/66453a3ba2cc5e1b','userId':'0cf4CMw1ZNCk',
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','animationPath': process.env.ANIMATION_URL,'userId':'0cf4CMw1ZNCk',
                                         'username':'bakeryb40488','uemail':'bakeryb40488@gmail.com','numContact':'0','ut':23,'ve':false,'isEmbed':0,'nextUrl':'/player?movieId=<movieId>',
                                         'bgload': process.env.SWF_URL + '/go_full.swf','lid':'13','ctc':'go','themeColor':'silver','tlang':'en_US',
                                         'siteId':'13','templateshow':'false','forceshow':'false','appCode':'go','lang':'en','tmcc':4048901,'fb_app_url':'/','is_published':'0',
