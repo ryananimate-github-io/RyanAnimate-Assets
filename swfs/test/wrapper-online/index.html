@@ -1,0 +1,106 @@
+<html>
+  <head>
+	<link rel="icon" href="../../favicon.ico" type="image/png">
+
+	<title>Wrapper Online Home</title>
+	<meta name="description" content="Wrapper Online is the Website edition to Wrapper offline | Legacy video maker for the GoAnimate community! Discord server: Https://discord.gg/goanimate">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Wrapper Online Home">
+	<meta property="og:description" content="Wrapper Online is the Website edition to Wrapper offline | Legacy video maker for the GoAnimate community! Discord server: Https://discord.gg/goanimate">
+	<meta property="og:url" content="https://wrapper-online2.herokuapp.com/">
+	<meta property="og:image:secure_url" content="/list_logo.png"> 
+	<meta property="og:image:" content="/list_logo.png"> 
+	<meta name="theme-color" content="#FF0080">
+	<link rel="stylesheet" type="text/css" href=".././redhoodieguyscwoffline/css/modern-normalize.css">
+	<link rel="stylesheet" type="text/css" href=".././redhoodieguyscwoffline/css/global.css">
+	<link rel="stylesheet" type="text/css" href=".././redhoodieguyscwoffline/css/list.css">
+</head>
+<body>
+
+<header>
+	<h1 style="margin:0"><img id="logo" src="/swfs/test/wrapper-online/img/list_logo.png" alt="Wrapper: Online"></h1>
+	<nav id="headbuttons">
+		
+		<a href="cc" class="button_small">Make A Character</a>
+		<a href="go_full" class="button_big">MAKE A VIDEO</a>
+	</nav>
+</header>
+
+<main>
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<td>Video Title</td>
+				<td>Last Modified</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody><tr><td><img src="movie_thumbs/m-0.png"></td><td><div>test</div><div>00:02</div></td><td><span>2</span><span>0</span><span>2</span><span>1</span><span>-</span><span>0</span><span>5</span><span>-</span><span>0</span><span>1</span><span> </span><span>0</span><span>4</span><span>:</span><span>1</span><span>8</span><span>:</span><span>3</span><span>2</span><span>.</span><span>7</span><span>7</span><span>8</span><span>Z</span></td><td><a href="javascript:;" onclick="popup('m-0')"></a><a href="edit/m-0"></a><a href="movies/m-0.xml" download="test.xml"></a></td></tr></tbody>
+		<tfoot>
+			<tr>
+				<td colspan="127"></td>
+			</tr>
+		</tfoot>
+	</table>
+</main>
+
+<footer>
+	<nav id="foot-left">
+		<a href="https://discord.io/goanimate4schools">GoAnimate For Schools Remastered Discord</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a href="/">Main Page</a>
+		<a href="/caillou.html">Caillou</a>
+	</nav>
+</footer>
+
+
+
+
+
+
+
+<script>
+	const closeReq = new XMLHttpRequest();
+	closeReq.open('GET', 'https://wrapper-online2.herokuapp.com/events/close');
+	closeReq.send();
+
+	var json;
+	var tbody = document.getElementsByTagName('tbody')[0];
+	var loadMore = document.getElementById('load_more');
+	const listReq = new XMLHttpRequest();
+	listReq.open('GET', 'https://wrapper-online2.herokuapp.com/movieList');
+	listReq.send();
+
+	var C = 0;
+	function loadRows() {
+		let c = C; C += 69;
+		for (; c < C; c++) {
+			if (c > json.length - 1) {
+				loadMore.remove();
+				break;
+			}
+
+			const tbl = json[c];
+			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
+			tbody.insertAdjacentHTML('beforeend',
+				'<tr><td><img src="movie_thumbs/' + tbl.id + '"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="edit/' + tbl.id + '"></a><a href="movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+		}
+	}
+
+	loadMore.onclick = loadRows;
+	listReq.onreadystatechange = function (e) {
+		if (listReq.readyState != 4) return;
+		json = JSON.parse(listReq.responseText);
+		loadRows();
+	}
+
+	function popup(id) {
+		window.open('player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+	}
+</script>
+
+
+</body></html>
