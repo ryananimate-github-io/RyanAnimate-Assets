@@ -32,9 +32,9 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'apiserver':'/','m_mode':'school','isLogin':'Y','isEmbed':'0','ctc':'go','tlang':'en_US',
-          'storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
-          'appCode':'go','page':'','siteId':'go','userId':'0TBAAga2Mn6g','themeId':'family','bs':'adam','ut':30,'ft':'_sticky_filter_guy'
+                                        'storePath': process.env.STORE_URL + '/<store>',
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+                                        'appCode':'go','page':'','siteId':'go','userId':'0TBAAga2Mn6g','themeId':'family','bs':'adam','ut':30,'ft':'_sticky_filter_guy'
 				},
 				allowScriptAccess: 'always',
 				movie: process.env.SWF_URL + '/cc.swf', // 'http://localhost/cc.swf'
@@ -51,10 +51,10 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'apiserver':'/','isEmbed':'0','ctc':'go','tlang':'en_US',
-          'storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
-          'appCode':'go','siteId':'school','st':'','userId':'0DyHqK6Yj9dM','ut':23,'uisa':0,'themeId':'family',
-          'u_info_school':'OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ==',
+                                        'storePath': process.env.STORE_URL + '/<store>',
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+                                        'appCode':'go','siteId':'school','st':'','userId':'0DyHqK6Yj9dM','ut':23,'uisa':0,'themeId':'family',
+                                        'u_info_school':'OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ==',
 				},
 				allowScriptAccess: 'always',
 				movie: process.env.SWF_URL + '/cc_browser.swf', // 'http://localhost/cc_browser.swf'
@@ -73,16 +73,15 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'movieId':'','loadas':0,'asId':'','originalId':'','apiserver':'/','storePath': process.env.STORE_URL + '/<store>',
-          'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','animationPath': process.env.ANIMATION_URL + '/66453a3ba2cc5e1b','userId':'0cf4CMw1ZNCk',
-          'username':'bakeryb40488','uemail':'bakeryb40488@gmail.com','numContact':'0','ut':23,'ve':false,'isEmbed':0,'nextUrl':'/player?movieId=<movieId>',
-          'bgload': process.env.SWF_URL + '/go_full.swf','lid':'13','ctc':'go','themeColor':'silver','tlang':'en_US',
-          'siteId':'13','templateshow':'false','forceshow':'false','appCode':'go','lang':'en','tmcc':4048901,'fb_app_url':'/','is_published':'0',
-          'is_private_shared':'1',
-          'is_password_protected':false,'upl':'1','hb':'1','pts':'1','msg_index':'','ad':0,'has_asset_bg':1,'has_asset_char':0,'initcb':'studioLoaded',
-          'retut':0,'featured_categories':null,'s3base': process.env.S3BASE_URL + '/thumbnails','st':'','uisa':0,
-          'u_info':'OjI6elg5SnZCOUEyTHZiY2lhZGRXTm9Nd0ljVWhNbEpGaXJFdkpEdkltdEp6RWhrQ0VIbXZIVTBjRTlhUGZKMjJoVHVTUE5vZk1XYnFtSE1vZG5TeldyQVJNcDFmUFB2NDVtR0FTSlZZ',
-          'tm':'FIN','tray':'custom','isWide':1,'newusr':1,'goteam_draft_only':0,
-'
+                                        'clientThemePath': process.env.CLIENT_URL + '/<client_theme>','animationPath': process.env.ANIMATION_URL + '/66453a3ba2cc5e1b','userId':'0cf4CMw1ZNCk',
+                                        'username':'bakeryb40488','uemail':'bakeryb40488@gmail.com','numContact':'0','ut':23,'ve':false,'isEmbed':0,'nextUrl':'/player?movieId=<movieId>',
+                                        'bgload': process.env.SWF_URL + '/go_full.swf','lid':'13','ctc':'go','themeColor':'silver','tlang':'en_US',
+                                        'siteId':'13','templateshow':'false','forceshow':'false','appCode':'go','lang':'en','tmcc':4048901,'fb_app_url':'/','is_published':'0',
+                                        'is_private_shared':'1',
+                                        'is_password_protected':false,'upl':'1','hb':'1','pts':'1','msg_index':'','ad':0,'has_asset_bg':1,'has_asset_char':0,'initcb':'studioLoaded',
+                                        'retut':0,'featured_categories':null,'s3base': process.env.S3BASE_URL + '/thumbnails','st':'','uisa':0,
+                                        'u_info':'OjI6elg5SnZCOUEyTHZiY2lhZGRXTm9Nd0ljVWhNbEpGaXJFdkpEdkltdEp6RWhrQ0VIbXZIVTBjRTlhUGZKMjJoVHVTUE5vZk1XYnFtSE1vZG5TeldyQVJNcDFmUFB2NDVtR0FTSlZZ',
+                                        'tm':'FIN','tray':'custom','isWide':1,'newusr':1,'goteam_draft_only':0,
 
 				},
 				allowScriptAccess: 'always',
