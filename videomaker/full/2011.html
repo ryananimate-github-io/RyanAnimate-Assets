@@ -287,3 +287,205 @@ $('#channel_app_filter').click(function(e){
 </script>
 
 	</div>
+	<!-- END OF MAIN CONTENT -->
+	<!-- FOOTER -->
+<div style="clear:both"></div>
+
+</div>
+
+<div id="footer">
+	<div class="footer-inside clearfix">
+		<div class="as-seen-on clearfix">
+			<h4>As seen on:</h4>
+			<img src="/static/477/go/img/footer/img_logos_v2.jpg" alt=""/>
+		</div>
+		<hr>
+		<div id="footernav" class="clearfix">
+			<div class="col">
+				<h4><span>About GoAnimate</span></h4>
+				<ul>
+					<li><a href="/aboutus">Who we are</a></li>
+					<li><a href="https://blog.josephcrosmanplays532.github.io">Blog</a></li>
+					<li><a href="/videocontest">Contests</a></li>
+					<li><a href="https://press.josephcrosmanplays532.github.io/">Press</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h4><span>GoAnimate Solutions</span></h4>
+				<ul>
+					<li><a href="/biz">GoAnimate for Businesses</a></li>
+					<li><a href="https://goanimateforschools.github.io/" target="_blank">GoAnimate4Schools</a></li>
+					<li><a href="/playerbuilder">GoPlayer Widget</a></li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="col" style="border:none">
+				<h4><span>Usage Guidelines</span></h4>
+				<ul>
+					<li><a href="/termsofuse">Terms of Use</a></li>
+					<li><a href="/legal">Legal Notices</a></li>
+					<li><a href="/privacy">Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div class="col last">
+				<h4>Getting Help</h4>
+				<ul>
+					<li><a href="javascript:fullscreenStudio('/videomaker/full/tutorial');">Tutorial</a></li>
+					<li><a href="/howdoesitwork">Help Videos</a></li>
+					<li><a href="/faq">FAQs</a></li>
+					<li><a href="/forums">Forums</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+
+		<div class="footer-lang">
+		<span class="element">Select your preferred language:</span>
+		<span class="element">
+			<span class="selected">English</span>
+		</span>
+		<span class="element">
+			<a href="javascript:chooseLanguage('es')">Español</a>
+		</span>
+	</div>
+
+		<div class="copyright">GoAnimate &copy; 2012</div>
+	</div>
+</div>
+
+
+<div id="studio_container" style="display: none;">
+	<div id="studio_holder"><!-- Full Screen Studio -->
+		<div style="top: 50%; position: relative;">
+			This content requires the Adobe Flash Player 10.0.12. <a href="https://get.adobe.com/flashplayer/">Get Flash</a>
+		</div>
+	</div>
+</div>
+
+<!-- END OF PAGE STRUCTURE -->
+<!-- flex framework -->
+<div style="height:0;overflow:hidden;">
+	<object width="1" height="1">
+		<param name="MOVIE" value="https://josephcrosmanplays532.github.io/animation/857/Framework_Container.swf">
+		<param name="QUALITY" value="low">
+		<param name="SCALE" value="noborder">
+		<param name="wmode" value="transparent">
+		<embed src="https://josephcrosmanplays532.github.io/animation/857/Framework_Container.swf" wmode="transparent" width="1" height="1" quality="low">
+		</embed>
+	</object>
+</div>
+<div id="growlfeedback_block" class="growlUI" style="display:none">
+	<div id="growlnotify"><img src="/static/477/go/img/common/feedback/tick.png" width="52" height="52" onload="javascript:iePngFix(this,52,52);"></div>
+	<div id="growlerror"><img src="/static/477/go/img/common/feedback/cross.png" width="52" height="52" onload="javascript:iePngFix(this,52,52);"></div>
+	<div class="growlcontent">
+	<div class="growltitle">Notification</div>
+	<div id="growlfeedback"></div>
+	</div>
+</div>
+
+<div id="offer_container">
+</div>
+<script type="text/javascript">
+    </script>
+<div id="darkenScreenObject" style="display:none;">
+</div>
+<div style="display: none; position: absolute; margin-top: 0px; height: 355px; width: 550px; left: 230px; top: 0px; background: none; z-index: 50;" id="overlayObjectGlobal">
+<div id="overlayAlertBox" style="display:none; position: absolute;">
+   <div id="overlayAlertBoxTitle"><span id="overlayAlertBoxTitle"></span></div>
+   <div id="overlay_close" onclick="javascript:hideAlertBox();">&nbsp;</div>
+   <div class="overlaybody" style="text-align: left;float:left; padding: 10px 15px;">
+	<span id="alertBoxMessage"></span><br>
+	<div id="overlayAlertBoxBtn"><input type="button" value="��OK��" onclick="javascript:hideAlertBox();"></div>
+   </div>
+</div><div id="overlayHTMLBox" style="display:none; position: absolute;">
+   <div id="overlayHTMLInnerBox">
+      <div id="overlayHTMLBoxTitle"><span id="overlayHTMLBoxTitle"></span></div>
+      <div id="overlayHTML_close" onclick="javascript:hideHTMLBox();">&#215;</div>
+      <div class="overlaybody" style="text-align: left;float:left; padding: 10px 15px;clear:both;width:440px;">
+	   <span id="HTMLBoxMessage"></span>
+      </div>
+      <div id="HTMLBoxTP" style="display:none"></div>
+   </div>
+</div>    <div id="overlayGeneral" style="display:none;width:700px;position:relative;">
+	<div class="overlay_header"><img src="/static/477/go/img/overlay/img_popup_top_700.png" height="37" width="700" onload="javascript:iePngFix(this,700,37)"></div>
+        <div style="float:left; margin:0px; padding: 0px; width:700px;">
+            <div style="float:left; margin:0px; padding: 0px; width:700px;">
+		<span id="tracker_id" style="display:none"></span>
+                <div class="overlay_header_title"><span id="OG_title"></span></div>
+                <div class="overlayClose" id="OG_close_btn"><a href="javascript:goVoid();" onclick="javascript:hideOG();"></a></div>
+                <div style="background-color:#fff; position:relative;float:left;width:700px;">
+		    <div id="OG_content"></div>
+                </div>
+                <div class="overlay_footer"><img src="/static/477/go/img/overlay/img_popup_bottom_700.png" height="30" width="700" onload="javascript:iePngFix(this,700,30)"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/\
+javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2516970-1");
+pageTracker._setDomainName("none");
+
+//pageTracker._setCampSrcKey("goanimate.com");
+
+
+
+pageTracker._trackPageview();
+</script>
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={"qacct":"p-66CFnJxwubvnE"};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-66CFnJxwubvnE.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+	function logSendShareToGA() {
+	if (typeof pageTracker != 'undefined' && pageTracker)
+		pageTracker._trackPageview("/pageTracker/goals/reg/contactform");
+	}
+
+
+var uifrm_path = encodeURI(window.location.pathname);
+uifrm_path = uifrm_path.replace(/\//g, "%2F");
+uifrm = document.createElement("iframe");
+uifrm.setAttribute("name", "usu");
+uifrm.setAttribute("id", "usu");
+uifrm.setAttribute("src", "http://web.archive.org/web/20120209075956/http://usersignup.goanimate.com/tracking?v=1328774396&page=" + uifrm_path);
+uifrm.style.width = "1px";
+uifrm.style.height = "1px";
+uifrm.style.border = "0";
+uifrm.style.position = "absolute";
+document.body.appendChild(uifrm);
+
+</script>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 07:59:56 Feb 09, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:20:33 May 18, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 177.388
+  exclusion.robots: 0.21
+  exclusion.robots.policy: 0.202
+  RedisCDXSource: 2.073
+  esindex: 0.009
+  LoadShardBlock: 147.013 (3)
+  PetaboxLoader3.datanode: 156.471 (4)
+  CDXLines.iter: 24.504 (3)
+  load_resource: 781.013
+  PetaboxLoader3.resolve: 734.716
+-->
