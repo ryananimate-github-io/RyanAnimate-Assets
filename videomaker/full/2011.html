@@ -1,0 +1,88 @@
+<div class="channel_box">
+		<h3>Election 2012</h3>
+		<a class="image election" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Chibi Ninjas</h3>
+		<a class="image ninja" href="javascript:studioPreview()"><div class="new"></div><div class="plus-label">GoPlus</div></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Space Peepz</h3>
+		<a class="image space" href="javascript:studioPreview()"><div class="plus-label">GoPlus</div></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Chibi Peepz</h3>
+		<a class="image chibi" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+		<a class="btn_create create_cc" href="http://web.archive.org/web/20120210072018/http://goanimate.com/charactercreator/chibi">Create a Character &gt;</a>
+	</div>	<div class="channel_box">
+		<div class="coupons"></div>
+		<h3>Lil' Peepz</h3>
+		<a class="image action" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+		<a class="btn_create create_cc" href="http://web.archive.org/web/20120210072018/http://goanimate.com/charactercreator/cc2">Create a Character &gt;</a>
+	</div>	<div class="channel_box">
+		<div class="coupons"></div>
+		<h3>Comedy World</h3>
+		<a class="image custom" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+		<a class="btn_create create_cc" href="http://web.archive.org/web/20120210072018/http://goanimate.com/charactercreator/family">Create a Character &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Lil' Petz World</h3>
+		<a class="image animal" href="javascript:studioPreview()"><div class="plus-label">GoPlus</div></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Stick Figure</h3>
+		<a class="image stick" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>		<div class="channel_box">
+		<h3>Star Trek Quogs</h3>
+		<a class="image startrek" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>
+			<div class="channel_box">
+		<h3>It's Happy Bunny&trade;</h3>
+		<a class="image bunny" href="javascript:lstudioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+		<a class="btn_create create_slideshow" href="http://web.archive.org/web/20120210072018/http://goanimate.com/slideshow">Create a Slideshow &gt;</a>
+	</div>
+		<div class="channel_box">
+		<h3>Cartoon Classics</h3>
+		<a class="image retro" href="javascript:studioPreview()"></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>	<div class="channel_box">
+		<h3>Jungle Warfare</h3>
+
+		<a class="image jungle" href="javascript:studioPreview()"><div class="plus-label">GoPlus</div></a>
+		<a class="btn_create create_cartoon" href="javascript:studioPreview()">Make a Movie &gt;</a>
+	</div>
+<script>
+function loginStudio(thm,lid) {
+	registerSignupLoginCompleteHandler(function() {
+		location.reload(true);
+	});
+	showSignup(250);
+}
+
+(function($) {
+function showMenu() {
+	$('#channel_app_filter').addClass('on');
+	$('#channel_app_filter ul').show();
+	$('body').bind('click', hideMenu);
+}
+function hideMenu(e) {
+	if ($(e.target).closest('#channel_app_filter').length == 0) {
+		$('#channel_app_filter').removeClass('on');
+		$('#channel_app_filter ul').hide();
+		$('body').unbind('click', hideMenu);
+	}
+}
+$('#channel_app_filter').click(function(e){
+	if ($(this).hasClass('on')) hideMenu(e);
+	else showMenu();
+	e.stopPropagation();
+});
+})(jQuery);
+</script>
+
+	</div>
