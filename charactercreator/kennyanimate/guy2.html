@@ -120,24 +120,10 @@ function goSubscribe()
 function characterSaved()
 {
     SetCookie('cc_saved', '1', 1, '/');
-    window.location = 'https://ga.vyond.com/charactercreator/whiteboard';
+    window.location = 'https://josephcrosmanplays532.github.io/charactercreator/kennyanimate';
 }
 </script>
     </div>
-
-<script>
-function fbShare(ccId)
-{
-    if (ccId == undefined) {
-        return;
-    }
-    var url = encodeURIComponent('https://ga.vyond.com/?cc_id=' + ccId);
-    var title = encodeURIComponent('I just created a new character on Vyond');
-    var shareUrl = 'https://www.facebook.com/sharer.php?u=' + url + '&t=' + title;
-
-    window.open(shareUrl, 'fbshare', 'height=350, width=650, top=100, left=100, toolbar=no, menubar=no, scrollbars=no, resizable=no, status=no');
-}
-</script>
 
 <script>
 $(window).on('amplitude_loaded', function() {
