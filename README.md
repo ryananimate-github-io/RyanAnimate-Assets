@@ -11,7 +11,7 @@ or the thumbnails? Click [Here](https://github.com/2Epik4u/Wrapper-Online-thumbn
 
 
 # Credits
-Working Old GoAnimate Swfs:
-## tonyanifire
+## Working Old GoAnimate Swfs:
+tonyanifire
 ### about
 Cool domain with all of the archived old goanimate assets attempting to bring back the legacy video maker in 2021 saving the world of LVM clones! and it has some LVM clones including the old goanimate website built into it. this domain can be used anytime. this domain is updated somtimes because somtimes there is nothing to archive or do. but about the character creators, videomakers, and the video players. well i will work on that soon.
