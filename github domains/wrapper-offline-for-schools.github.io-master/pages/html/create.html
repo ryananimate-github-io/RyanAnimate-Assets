@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../../favicon.ico" type="image/png">
+	<title>Theme List</title>
+	<meta name="description" content="Wrapper: Offline (Revision)'s Theme List">
+	<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/create.css">
+	<script>
+		function characterThemes() {
+			document.getElementById("creation_type").style.display = "none";
+			document.getElementById("character_themes").style.display = "block";
+			document.getElementById("back").style.display = "block";
+		}
+		
+		function movieThemes() {
+			document.getElementById("creation_type").style.display = "none";
+			document.getElementById("movie_themes").style.display = "block";
+			document.getElementById("back").style.display = "block";
+		}
+		
+		function creationType() {
+			document.getElementById("creation_type").style.display = "block";
+			document.getElementById("character_themes").style.display = "none";
+			document.getElementById("movie_themes").style.display = "none";
+			document.getElementById("back").style.display = "none";
+		}
+		
+		function showCredits() {
+			document.getElementById("credits").style.display="block";
+			document.getElementById("credits_button").style.display="none";
+		}
+	</script>
+</head>
+<body>
+
+<header>
+	<a href="../../">
+		<h1 style="margin:0"><img id="logo" src="../img/logo_v2.png" alt="Wrapper: Offline (Revision)"/></h1>
+	</a>
+	<nav id="headbuttons">
+		<a class="button_small" id="back" onclick="creationType()" style="display: none">BACK</a>
+	</nav>
+</header>
+
+<main>
+	
+<div id="creation_type" style="display: unset">
+	<h1>Pick a creation to continue.</h1>
+
+	<div id="column1">
+		<div class="theme pick_creation">
+			<div onclick="characterThemes()">
+				<img src="../img/themelist/Character.png" alt="Create a character">
+				<p>Character</p>
+			</div>
+		</div>
+		<div class="theme pick_creation">
+			<div onclick="movieThemes()">
+				<img src="../img/themelist/Movie.png" alt="Make a movie">
+				<p>Movie</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="character_themes" style="display: none">
+	<h1>Select a theme for your character</h1>
+
+	<div id="column1">
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/family">
+				<img src="../img/themelist/Comedy_World.jpg" alt="Comedy World">
+				<p>Comedy World</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/cc2">
+				<img src="../img/themelist/lil_Peepz.jpg" alt="Lil' Peepz">
+				<p>Lil' Peepz</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/anime">
+				<img src="../img/themelist/Anime.jpg" alt="Anime">
+				<p>Anime</p>
+			</a>
+		</div>
+	</div><br />
+
+	<div id="column3">
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/ninjaanime">
+				<img src="../img/themelist/Ninja_Anime.jpg" alt="Ninja Anime">
+				<p>Ninja Anime</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/spacecitizen">
+				<img src="../img/themelist/Space_Citizens.jpg" alt="Space Citizens">
+				<p>Space Citizens</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/custom">
+				<img src="../img/themelist/Chibi_Peepz.jpg" alt="Chibi Peepz">
+				<p>Chibi Peepz</p>
+			</a>
+		</div>
+	</div><br />
+
+	<div id="column4">
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/ninja">
+				<img src="../img/themelist/Chibi_Ninjas.jpg" alt="Chibi Ninjas">
+				<p>Chibi Ninjas</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/animal">
+				<img src="../img/themelist/Lil_Petz_World.jpg" alt="Lil' Petz World">
+				<p>Lil' Petz World</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/charactercreator/wo4s2.0/space">
+				<img src="../img/themelist/Space_Peepz.jpg" alt="Space Peepz">
+				<p>Space Peepz</p>
+			</a>
+		</div>
+	</div><br />
+
+	<h2>Want some tunes while you make your character?</h2>
+	<p>Listen to <a href="https://drive.google.com/folderview?id=1-o5FmG5Aye9U7qV78vaG3ViMqJSWqk5o">the Remastered GoAnimate Soundtrack by Sphynx!</a></p>
+</div>
+
+<div id="movie_themes" style="display: none">
+	<h1>Select a theme for your movie</h1>
+	
+	<div id="column1">
+		<div class="theme">
+			<a href="http://localhost:4343/go_full?tray=custom">
+				<img src="../img/themelist/Comedy_World.jpg" alt="Comedy World">
+				<p>Comedy World</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/action">
+				<img src="../img/themelist/lil_Peepz.jpg" alt="Lil' Peepz">
+				<p>Lil' Peepz</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aretro">
+				<img src="../img/themelist/Cartoon_Classics.jpg" alt="Cartoon Classics">
+				<p>Cartoon Classics</p>
+			</a>
+		</div>
+	</div><br />
+
+	<div id="column2">
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/apolitic2">
+				<img src="../img/themelist/Election_2012.jpg" alt="Election 2012">
+				<p>Election 2012</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/astick">
+				<img src="../img/themelist/Stick_Figure.jpg" alt="Stick Figure">
+				<p>Stick Figure</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aanime">
+				<img src="../img/themelist/Anime.jpg" alt="Anime">
+				<p>Anime</p>
+			</a>
+		</div>
+	</div><br />
+
+	<div id="column3">
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aninjaanime">
+				<img src="../img/themelist/Ninja_Anime.jpg" alt="Ninja Anime">
+				<p>Ninja Anime</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aspacecitizen">
+				<img src="../img/themelist/Space_Citizens.jpg" alt="Space Citizens">
+				<p>Space Citizens</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/achibi">
+				<img src="../img/themelist/Chibi_Peepz.jpg" alt="Chibi Peepz">
+				<p>Chibi Peepz</p>
+			</a>
+		</div>
+	</div><br />
+
+	<div id="column4">
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aninja">
+				<img src="../img/themelist/Chibi_Ninjas.jpg" alt="Chibi Ninjas">
+				<p>Chibi Ninjas</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aanimal">
+				<img src="../img/themelist/Lil_Petz_World.jpg" alt="Lil' Petz World">
+				<p>Lil' Petz World</p>
+			</a>
+		</div>
+		<div class="theme">
+			<a href="/videomaker/full/wo4s2.0/aspace">
+				<img src="../img/themelist/Space_Peepz.jpg" alt="Space Peepz">
+				<p>Space Peepz</p>
+			</a>
+		</div>
+	</div><br />
+
+	<h2>Want some tunes while you make your video?</h2>
+	<p>Listen to <a href="https://drive.google.com/folderview?id=1-o5FmG5Aye9U7qV78vaG3ViMqJSWqk5o">the Remastered GoAnimate Soundtrack by Sphynx!</a></p>
+</div>
+
+</main>
+
+<footer>
+	<nav id="foot-left">
+		<span>vWRAPPER_VER</span>
+		<a href="../../faq.html">FAQ</a>
+		<a href="https://discord.gg/b7YSRkg">Wrapper Hub</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a href="../../">Main Page</a>
+		<a href="/caillou.html">Caillou</a>
+	</nav>
+</footer>
+
+</body></html>
