@@ -6,17 +6,16 @@ title Wrapper: Offline Import Script
 :: Initialize (stop command spam, clean screen, make variables work, set to UTF-8)
 @echo off && cls
 SETLOCAL ENABLEDELAYEDEXPANSION
-chcp 65001 >nul
 
 :: Move to base folder, and make sure it worked (otherwise things would go horribly wrong)
-cd /d %~dp0
+pushd "%~dp0"
 if !errorlevel! NEQ 0 goto error_location
-cd ..
+pushd ..
 if !errorlevel! NEQ 0 goto error_location
 if not exist utilities\import.bat ( goto error_location )
 if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
-cd utilities
+popd utilities
 if !errorlevel! NEQ 0 goto error_location
 goto noerror_location
 :error_location
@@ -41,7 +40,9 @@ set THEMEFOLDER=..\server\store\3a981f5cb2739137\import\
 
 :: Check if files exist in import folder
 if not exist import_these ( md import_these & goto askforfile )
-for %%i in (import_these\*) do ( goto filesdetected )
+for /f %%A in ('dir /B /A:-D import_these 2^>nul') do (
+	if "%%A" NEQ "File Not Found" ( goto filesdetected )
+)
 goto askforfile
 
 :: List all files in folder and verify they should be imported
@@ -49,13 +50,15 @@ goto askforfile
 echo Would you like to import the following files?
 echo Press Y to do it, press N to not do it.
 echo:
-dir /b import_these
+dir /B /A:-D import_these
 echo:
-choice /n /m "Response: "
+:importaskretry
+set /p IMPORTCHOICE= Response:
 echo:
-if !errorlevel! equ 0 exit
-if !errorlevel! equ 1 goto startimport
-if !errorlevel! equ 2 goto end
+if not '!importchoice!'=='' set importchoice=%importchoice:~0,1%
+if /i "!importchoice!"=="y" goto startimport
+if /i "!importchoice!"=="n" goto end
+echo You must answer Yes or No. && goto importaskretry
 
 :: Get file to import, move it to import folder
 :askforfile
@@ -69,14 +72,15 @@ if !folderfilled!==n (
 	:reaskforfile
 	echo:
 	set /p CFDIR= File:
+	set CFDIR=%cfdir:"=%
 	if /i "!CFDIR!"=="gotodir" start "" "!themefolder!" & goto end
 	if /i "!CFDIR!"=="0" goto end
 	if not exist "!CFDIR!" echo That doesn't seem to exist. & goto reaskforfile
 	echo:
-	for %%i in (!cfdir!) do ( set CFID=%%~nxi )
+	for %%i in ("!cfdir!") do ( set CFID=%%~nxi )
 	pushd import_these
 	if exist "!cfid!" ( echo ...I have no idea how this code is activating, yet this file is already in the import_these folder. )
-	copy !cfdir! "!cfid!" >nul
+	copy "!cfdir!" "!cfid!" >nul
 	popd
 )
 
@@ -114,10 +118,13 @@ for %%a in (import_these\*) do (
 	if !cftype!=="swf" (
 		echo Press 1 if !cfname! is an image file.
 		echo Press 2 if !cfname! is a sound file.
-		choice /c 12 /n /m "Response: "
-		if !errorlevel! equ 0 exit
-		if !errorlevel! equ 1 set CFTYPE="img"
-		if !errorlevel! equ 2 set CFTYPE="sound"
+		:swfaskretry
+		set /p SWFCHOICE= Response:
+		echo:
+		if "!swfchoice!"=="0" goto end
+		if "!swfchoice!"=="1" set CFTYPE="img"
+		if "!swfchoice!"=="2" set CFTYPE="sound"
+		if "!CFTYPE!"=="" echo You must answer what type of file it is. && goto swfaskretry
 		echo:
 	)
 
@@ -125,19 +132,25 @@ for %%a in (import_these\*) do (
 	if !cftype!=="img" (
 		echo Press 1 to import !cfname! as a backdrop.
 		echo Press 2 to import !cfname! as a prop.
-		choice /c 12 /n /m "Response: "
-		if !errorlevel! equ 0 exit
-		if !errorlevel! equ 1 set CFSUBTYPE="bg"
-		if !errorlevel! equ 2 set CFSUBTYPE="prop"
+		:imgaskretry
+		set /p IMGCHOICE= Response:
+		echo:
+		if "!imgchoice!"=="0" goto end
+		if "!imgchoice!"=="1" set CFSUBTYPE="bg"
+		if "!imgchoice!"=="2" set CFSUBTYPE="prop"
+		if "!CFSUBTYPE!"=="" echo You must answer what type of image it is. && goto imgaskretry
 		echo:
 	)
 	if !cftype!=="sound" (
 		echo Press 1 to import !cfname! as music.
 		echo Press 2 to import !cfname! as a sound effect.
-		choice /c 12 /n /m "Response: "
-		if !errorlevel! equ 0 exit
-		if !errorlevel! equ 1 set CFSUBTYPE="bgmusic"
-		if !errorlevel! equ 2 set CFSUBTYPE="soundeffect"
+		:soundaskretry
+		set /p SOUNDCHOICE= Response:
+		echo:
+		if "!soundchoice!"=="0" goto end
+		if "!soundchoice!"=="1" set CFSUBTYPE="bgmusic"
+		if "!soundchoice!"=="2" set CFSUBTYPE="soundeffect"
+		if "!CFSUBTYPE!"=="" echo You must answer what type of sound it is. && goto soundaskretry
 		echo:
 	)
 
@@ -146,11 +159,14 @@ for %%a in (import_these\*) do (
 		echo Press 1 to make !cfname! a normal prop.
 		echo Press 2 to make !cfname! holdable.
 		echo Press 3 to make !cfname! headgear.
-		choice /c 123 /n /m "Response: "
-		if !errorlevel! equ 0 exit
-		if !errorlevel! equ 1 set CFATTACHATTR=holdable="0" wearable="0"
-		if !errorlevel! equ 2 set CFATTACHATTR=holdable="1" wearable="0"
-		if !errorlevel! equ 3 set CFATTACHATTR=holdable="0" wearable="1"
+		:propaskretry
+		set /p PROPCHOICE= Response:
+		echo:
+		if /i "!propchoice!"=="0" goto end
+		if /i "!propchoice!"=="1" set CFATTACHATTR=holdable="0" wearable="0"
+		if /i "!propchoice!"=="2" set CFATTACHATTR=holdable="1" wearable="0"
+		if /i "!propchoice!"=="3" set CFATTACHATTR=holdable="0" wearable="1"
+		if "!CFATTACHATTR!"=="" echo You must answer what type of prop it is. && goto propaskretry
 		echo:
 	)
 	if !cftype!=="sound" (
@@ -177,11 +193,14 @@ for %%a in (import_these\*) do (
 		echo If you want to replace the old one, press Y.
 		echo If you'd like to skip it and rename the new file, press N.
 		echo Note that replacing may cause issues.
-		choice /n /m "Response: "
+		:replaceaskretry
+		set /p REPLACECHOICE= Response:
 		echo:
-		if !errorlevel! equ 0 exit
-		if !errorlevel! equ 1 goto overwritefile
-		if !errorlevel! equ 2 popd & goto moveconflicts
+		if not '!replacechoice!'=='' set replacechoice=%replacechoice:~0,1%
+		if /i "!replacechoice!"=="0" goto end
+		if /i "!replacechoice!"=="y" goto overwritefile
+		if /i "!replacechoice!"=="n" popd & goto moveconflicts
+		echo You must answer Yes or No. && goto replaceaskretry
 	)
 	:overwritefile
 	move /y "..\!cfid!" "!cfid!" >nul
@@ -232,6 +251,9 @@ for %%a in (import_these\*) do (
 	echo !cfname! imported.
 	echo:
 	echo:
+	
+	:: Copy theme.xml to _THEMES folder
+	copy /y !themefolder!theme.xml wrapper\_THEMES\import.xml
 
 	:: Move file out of the way so we don't repeat it
 	pushd import_these
